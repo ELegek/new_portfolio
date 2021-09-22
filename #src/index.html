@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Gulp</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="overlay"></div>
+		@@include('_header.html')
+
+		<main class="page">
+			<section class="page__section page__section_1">
+				<div class="container">
+					<h1 class="page__title">Отличная статья</h1>
+					<a href="#popup" class="header__phone popup-link">Popup1</a>
+					<div class="page__text">
+						@@include('_tabs.html')
+					</div>
+				</div>
+
+			</section>
+			<section class="page__section page__section_2">
+				<div class="container">
+					<h1 class="page__title">Отличная статья</h1>
+					<div class="page__text">
+						@@include('_form.html')
+					</div>
+				</div>
+
+			</section>
+			<section class="page__section page__section_3">
+				<div class="container">
+					<h1 class="page__title">Слайдер</h1>
+					<div class="page__text">
+						<div class="wrapper">
+							@@include('_slider.html')
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('_footer.html')
+		@@include('_popup.html')
+
+	</div>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/script.min.js"></script>
+
+</body>
+
+</html>

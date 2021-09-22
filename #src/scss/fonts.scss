@@ -1,0 +1,9 @@
+@include font("Gilroy-Bold", "Gilroy-Bold", "400", "normal");
+@include font("Gilroy-Medium", "Gilroy-Medium", "400", "normal");
+@include font("Gilroy-Regular", "Gilroy-Regular", "400", "normal");
+@include font("Gilroy-SemiBold", "Gilroy-SemiBold", "400", "normal");
+
+
+// Подключаем шрифты ===========================================
+// &display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,regular,500,700,900&display=swap&subset");

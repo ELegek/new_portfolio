@@ -1,0 +1,13 @@
+// Основные цвета ======================
+$title: #363838;
+$default: #5A5A5A;
+// Шрифт по умолчанию =======================
+$fontFamily: 'Roboto';
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

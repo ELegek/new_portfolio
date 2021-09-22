@@ -1,0 +1,71 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+		url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+@import 'vars';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+
+// header
+
+.header {
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+// main ========================================================
+
+.page {
+	margin-top: 100px;
+}
+
+.page__section {
+	padding: 50px 0;
+}
+
+.page__section_1 {
+	background-color: #794f45;
+}
+
+.page__section_2 {
+	background-color: #312e35;
+}
+
+.page__section_3 {
+	background-color: #7a956b;
+}
+
+// main ========================================================
+// footer ========================================================
+
+
+
+// Modules
+@import 'modules/menu';
+@import 'modules/popup';
+@import 'modules/tabs';
+@import 'modules/form';
+@import 'modules/slider';
+@import 'modules/color-1.scss';
+
+
+
+// Media
+@import 'media';
