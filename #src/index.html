@@ -10,42 +10,25 @@
 
 <body>
 	<div class="wrapper">
-		<div class="overlay"></div>
 		@@include('_header.html')
+		<!-- navigation menu start -->
+		<nav class="nav-menu">
+			<div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+			<div class="nav-menu-inner">
+				<ul>
+					<li><a href="#" class="inner-shadow active">home</a></li>
+					<li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
+					<li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
+					<li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
+					<li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
+					<li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- navigation menu end -->
 
-		<main class="page">
-			<section class="page__section page__section_1">
-				<div class="container">
-					<h1 class="page__title">Отличная статья</h1>
-					<a href="#popup" class="header__phone popup-link">Popup1</a>
-					<div class="page__text">
-						@@include('_tabs.html')
-					</div>
-				</div>
 
-			</section>
-			<section class="page__section page__section_2">
-				<div class="container">
-					<h1 class="page__title">Отличная статья</h1>
-					<div class="page__text">
-						@@include('_form.html')
-					</div>
-				</div>
 
-			</section>
-			<section class="page__section page__section_3">
-				<div class="container">
-					<h1 class="page__title">Слайдер</h1>
-					<div class="page__text">
-						<div class="wrapper">
-							@@include('_slider.html')
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		@@include('_footer.html')
-		@@include('_popup.html')
 
 	</div>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

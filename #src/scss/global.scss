@@ -7,9 +7,10 @@ body {
   font-family: $fontFamily;
   font-weight: 400;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 1.5;
   overflow-x: hidden;
   min-width: 320px;
+  background-color: var(--bg-black-50);
 }
 
 
@@ -29,7 +30,42 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.outer-shadow {
+  box-shadow: var(--outer-shadow);
+}
+
+.hover-in-shadow {
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: var(--outer-shadow-0);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+  }
+
+  &:hover:after {
+    box-shadow: var(--inner-shadow);
+  }
 }

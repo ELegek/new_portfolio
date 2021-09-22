@@ -6,6 +6,9 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
 body,
@@ -25,15 +28,18 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  list-style: none;
 }
 
 ul[class] {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
+  vertical-align: middle;
   max-width: 100%;
-  display: block;
 }
 
 input,
@@ -53,4 +59,8 @@ a {
 button {
   cursor: pointer;
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }
