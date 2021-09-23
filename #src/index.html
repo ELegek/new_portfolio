@@ -9,29 +9,54 @@
 </head>
 
 <body>
-	<div class="wrapper">
-		@@include('_header.html')
-		<!-- navigation menu start -->
-		<nav class="nav-menu">
-			<div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
-			<div class="nav-menu-inner">
-				<ul>
-					<li><a href="#" class="inner-shadow active">home</a></li>
-					<li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-					<li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
-					<li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-					<li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-					<li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
-				</ul>
+
+	@@include('_header.html')
+	<!-- navigation menu start -->
+	<nav class="nav-menu">
+		<div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+		<div class="nav-menu-inner">
+			<ul>
+				<li><a href="#" class="inner-shadow active">home</a></li>
+				<li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
+				<li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
+				<li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
+				<li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
+				<li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+			</ul>
+		</div>
+		<!-- copyright text -->
+		<p class="copyright-text">&copy; 2021 Evgeny Lezhepekov</p>
+	</nav>
+	<!-- navigation menu end -->
+
+	<!-- home section start -->
+	<section class="home-section section">
+		@@include('_effect.html')
+		<div class="container">
+			<div class="row full-screen align-items-center">
+				<div class="home-text">
+					<p>Hello</p>
+					<h2>I`m Evgeny</h2>
+					<h1>Front-end developer</h1>
+					<a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+				</div>
+				<div class="home-img">
+					<div class="img-box inner-shadow">
+						<img class="outer-shadow" src="img/ava-n.png" alt="profile-pic">
+					</div>
+				</div>
 			</div>
-		</nav>
-		<!-- navigation menu end -->
+		</div>
+	</section>
+	<!-- home section end -->
 
 
 
 
-	</div>
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+
 	<script src="js/script.min.js"></script>
 
 </body>
