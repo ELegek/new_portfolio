@@ -66,6 +66,7 @@ body.hidden-scrolling {
     width: 100%;
     height: 100%;
     transition: all .3s ease;
+    z-index: -1;
   }
 
   &:hover:after {
@@ -92,6 +93,7 @@ body.hidden-scrolling {
   border-radius: 30px;
   transition: all .3s ease;
   display: inline-block;
+  border: none;
 
   &:after {
     border-radius: 30px;
