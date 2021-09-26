@@ -41,9 +41,18 @@
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
+
+    &.hide {
+      display: none;
+    }
+
+    &.show {
+      display: block;
+      animation: fadeInTop .5s ease;
+    }
   }
 
-  .portfolo-item-inner {
+  .portfolio-item-inner {
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -105,12 +114,57 @@
   width: 100%;
   height: 100%;
   z-index: 1000;
-  overflow-y: auto;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .pp-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: var(--bg-opacity);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    div {
+      height: 40px;
+      width: 40px;
+      border: 3px solid var(--skin-color);
+      border-radius: 50%;
+      border-right: 3px solid transparent;
+      animation: spin 2s linear infinite;
+    }
+  }
 
   .pp-details {
     max-width: 1350px;
-    width: 85%;
+    width: calc(85% + 30px);
     margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .5s ease;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   .pp-details-inner {
@@ -124,14 +178,80 @@
     background-color: var(--bg-black-100);
   }
 
+  .pp-title {
+    padding: 0 15px;
+
+    h2 {
+      font-size: 28px;
+      color: var(--text-black-900);
+      text-transform: capitalize;
+      font-weight: 600;
+      margin: 0 0 5px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-black-600);
+      margin: 0 0 15px;
+      border-bottom: 1px solid var(--bg-black-100);
+      padding-bottom: 10px;
+
+      span {
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .pp-project-details {
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-black-700);
+      margin: 0 0 15px;
+      text-transform: capitalize;
+    }
+
+  }
+
   .description {
     flex: 0 0 65%;
     max-width: 65%;
+    padding: 0 15px;
+
+    p {
+      font-size: 16px;
+      color: var(--text-black-600);
+      line-height: 26px;
+      margin: 0;
+    }
   }
 
   .info {
     flex: 0 0 35%;
-    max-width: 35%;
+    max-width: 3 5%;
+    padding: 0 15px;
+
+    ul li {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: var(--text-black-600);
+      font-size: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-weight: 400;
+      }
+
+      a {
+        color: var(--skin-color);
+      }
+    }
   }
 
   .pp-img {
