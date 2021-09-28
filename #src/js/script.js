@@ -323,6 +323,46 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// ------------------------ theme colors ---------------------------
-	
+
+	const colors = document.querySelectorAll('.color');
+
+	colors.forEach((color) => {
+		color.addEventListener('click', (event) => {
+			if (event.target.classList.contains('color-1')) {
+				document.documentElement.classList.remove('color-1', 'color-2', 'color-3', 'color-4', 'color-5');
+				document.documentElement.classList.add('color-1');
+			} else if (event.target.classList.contains('color-2')) {
+				document.documentElement.classList.remove('color-1', 'color-2', 'color-3', 'color-4', 'color-5');
+				document.documentElement.classList.add('color-2');
+			} else if (event.target.classList.contains('color-3')) {
+				document.documentElement.classList.remove('color-1', 'color-2', 'color-3', 'color-4', 'color-5');
+				document.documentElement.classList.add('color-3');
+			} else if (event.target.classList.contains('color-4')) {
+				document.documentElement.classList.remove('color-1', 'color-2', 'color-3', 'color-4', 'color-5');
+				document.documentElement.classList.add('color-4');
+			} else if (event.target.classList.contains('color-5')) {
+				document.documentElement.classList.remove('color-1', 'color-2', 'color-3', 'color-4', 'color-5');
+				document.documentElement.classList.add('color-5');
+			}
+		});
+	});
+
+	// --------------------- theme ligth and dark mode ---------------------
+
+	const dayNight = document.querySelector('.day-night');
+
+	dayNight.addEventListener('click', () => {
+		dayNight.querySelector('i').classList.toggle('fa-sun');
+		dayNight.querySelector('i').classList.toggle('fa-moon');
+		document.body.classList.toggle('dark');
+	});
+
+	window.addEventListener('load', () => {
+		if (document.body.classList.contains('dark')) {
+			dayNight.querySelector('i').classList.add('fa-sun');
+		} else {
+			dayNight.querySelector('i').classList.add('fa-moon');
+		}
+	})
 
 });
